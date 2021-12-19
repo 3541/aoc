@@ -6,5 +6,6 @@ pkgs.mkShell {
     rustc
     rust-analyzer
     rustfmt
+    lldb
   ];
 }
