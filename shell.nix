@@ -7,5 +7,6 @@ pkgs.mkShell {
     rust-analyzer
     rustfmt
     lldb
+    (python3.withPackages (p: with p; [ p.z3 ]))
   ];
 }
