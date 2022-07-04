@@ -1,7 +1,7 @@
 { pkgs ? import <nixpkgs> { } }:
 pkgs.mkShell {
   packages = with pkgs; [
-    (clang-tools.override { llvmPackages = llvmPackages_12; })
+    clang-tools
     cargo
     rustc
     rust-analyzer
