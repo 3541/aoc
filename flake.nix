@@ -9,5 +9,5 @@
   outputs = { self, nixpkgs, utils, ... }:
     utils.lib.eachDefaultSystem (system:
       let pkgs = nixpkgs.legacyPackages.${system};
-      in { devShell = pkgs.mkShell { packages = with pkgs; [ php nasm ]; }; });
+      in { devShell = pkgs.mkShell { packages = with pkgs; [ php nasm dotnet-sdk_8 ]; }; });
 }
