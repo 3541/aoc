@@ -11,7 +11,17 @@
       let pkgs = nixpkgs.legacyPackages.${system};
       in {
         devShell = pkgs.mkShell {
-          packages = with pkgs; [ php nasm dotnet-sdk_8 racket ];
+          packages = let o = pkgs.ocaml-ng.ocamlPackages_5_1;
+          in with pkgs; [
+            php
+            nasm
+            dotnet-sdk_8
+            racket
+            o.ocaml
+            o.merlin
+            o.utop
+            o.ocamlformat
+          ];
         };
       });
 }
