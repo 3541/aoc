@@ -21,7 +21,13 @@
             o.merlin
             o.utop
             o.ocamlformat
+            clang
+            lld
+            gnustep.make
+            clang-tools
           ];
+
+          buildInputs = with pkgs; [ gnustep.base ];
         };
       });
 }

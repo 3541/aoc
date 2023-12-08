@@ -1,0 +1,1 @@
+clang -O3 -fuse-ld=lld -lgnustep-base -lobjc $(gnustep-config --objc-flags) -I $(gnustep-config --variable=GNUSTEP_SYSTEM_HEADERS) -L $(gnustep-config --variable=GNUSTEP_SYSTEM_LIBRARIES) -fobjc-nonfragile-abi -fobjc-arc 08.m -o 08
