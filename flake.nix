@@ -25,6 +25,7 @@
             lld
             gnustep.make
             clang-tools
+            omnisharp-roslyn
           ];
 
           buildInputs = with pkgs; [ gnustep.base ];
